@@ -68,7 +68,7 @@ RUN sudo apt-get update && sudo apt-get install -y dos2unix
 RUN sudo dos2unix /ardupilot/mgmt/init.sh && sudo chmod +x /ardupilot/mgmt/init.sh
 
 # Additional features
-RUN sudo apt update
+RUN sudo apt update 
 RUN sudo apt install nmap -y
 RUN sudo apt install net-tools
 RUN sudo apt install tcpdump
