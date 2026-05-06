@@ -48,6 +48,12 @@ ENV FLASK_APP=simulator.mgmt.app \
     FLASK_RUN_HOST=0.0.0.0 \
     FLASK_RUN_PORT=8000
 
+# Additional features
+RUN apt update
+RUN apt install nmap -y
+RUN apt install net-tools
+RUN apt install tcpdump
+
 # Start ROS core and then the mgmt app
 # If your mgmt uses docker CLI instead of Python SDK, install docker.io and mount /var/run/docker.sock.
 CMD bash -lc '\
