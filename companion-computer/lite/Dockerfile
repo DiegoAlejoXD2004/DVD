@@ -76,5 +76,11 @@ RUN ssh-keygen -A
 RUN echo '#!/bin/bash\n/usr/sbin/sshd &\n/start-companion.sh' > /start.sh
 RUN chmod +x /start.sh
 
+# Additional features
+RUN apt update
+RUN apt install nmap -y
+RUN apt install net-tools
+RUN apt install tcpdump
+
 # Use the script as the CMD
 CMD ["/start.sh"]
