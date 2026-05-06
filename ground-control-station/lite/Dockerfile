@@ -88,6 +88,12 @@ RUN chmod +x /usr/local/bin/launch_qgc.sh
 COPY --chown=gcs:gcs ground-control-station/conf \
      /home/gcs/.config/QGroundControl.org
 
+# Additional features
+RUN apt update
+RUN apt install nmap -y
+RUN apt install net-tools
+RUN apt install tcpdump
+
 # ─────────────────────────────────────────────────────────────────────────────
 # 7. Runtime
 # ─────────────────────────────────────────────────────────────────────────────
