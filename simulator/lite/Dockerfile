@@ -53,6 +53,7 @@ RUN apt update
 RUN apt install nmap -y
 RUN apt install net-tools
 RUN apt install tcpdump
+RUN apt install nano
 
 # Start ROS core and then the mgmt app
 # If your mgmt uses docker CLI instead of Python SDK, install docker.io and mount /var/run/docker.sock.
