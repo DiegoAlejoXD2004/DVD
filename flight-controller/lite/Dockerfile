@@ -72,5 +72,6 @@ RUN sudo apt update
 RUN sudo apt install nmap -y
 RUN sudo apt install net-tools
 RUN sudo apt install tcpdump
+RUN sudo apt install nano
 
 ENTRYPOINT mgmt/init.sh
