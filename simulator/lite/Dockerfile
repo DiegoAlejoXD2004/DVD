@@ -55,6 +55,9 @@ RUN apt install net-tools
 RUN apt install tcpdump
 RUN apt install nano
 
+RUN apt install python3-pip python3-dev
+RUN pip install pymavlink
+
 # Start ROS core and then the mgmt app
 # If your mgmt uses docker CLI instead of Python SDK, install docker.io and mount /var/run/docker.sock.
 CMD bash -lc '\
