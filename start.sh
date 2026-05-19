@@ -320,7 +320,7 @@ if [[ "$wifi_simulation" == "y" ]]; then
     docker exec "$GCS_CID" sh -c "
       wpa_supplicant -B -i '$gcs_interface' -c /etc/wpa_supplicant/wpa_supplicant.conf -D nl80211;
       ip addr add 192.168.13.14/24 dev '$gcs_interface';
-      ip route add default via 192.168.13.1 dev '$gcs_interface';
+      ip route replace default via 192.168.13.1 dev '$gcs_interface';
     "
 
     echo -e "${CYAN}------------------------------------------------------"
